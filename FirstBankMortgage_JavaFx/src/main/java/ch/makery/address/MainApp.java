@@ -36,7 +36,7 @@ public class MainApp extends Application {
      * Constructor
      */
     public MainApp() {
-
+  
     }
 
 
@@ -88,11 +88,11 @@ public class MainApp extends Application {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("view/PersonOverview.fxml"));
-            AnchorPane personOverview = (AnchorPane) loader.load();
+            loader.setLocation(MainApp.class.getResource("view/Mortgage.fxml"));
+            AnchorPane Mortgage = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
+            rootLayout.setCenter(Mortgage);
 
             // Give the controller access to the main app.
             MortgageController controller = loader.getController();

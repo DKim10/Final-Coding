@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="363.0" prefWidth="693.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MortgageController">
+<AnchorPane prefHeight="363.0" prefWidth="693.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MortgageController">
    <children>
-      <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.4126984126984127" layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="600.0" stylesheets="@DarkTheme.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@DarkTheme.css">
                <children>
+                  <Label fx:id="income" alignment="CENTER" layoutX="96.0" layoutY="4.0" prefHeight="64.0" prefWidth="281.0" text="Income" textAlignment="CENTER" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="Expenses" alignment="CENTER" layoutY="64.0" prefHeight="55.0" prefWidth="281.0" text="Expenses" textAlignment="CENTER" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="4.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CreditScore" alignment="CENTER" layoutY="119.0" prefHeight="55.0" prefWidth="281.0" text="Cedit Score" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="HouseCost" alignment="CENTER" layoutY="174.0" prefHeight="55.0" prefWidth="281.0" text="House Cost" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="Term" alignment="CENTER" layoutY="236.0" prefHeight="60.0" prefWidth="281.0" text="Term" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="MortgagePayment" alignment="CENTER" layoutY="296.0" prefHeight="64.0" prefWidth="281.0" text="Mortgage Payment" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" >
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@DarkTheme.css">
                <children>
+                  <TextField fx:id="incomeStr" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="23.0" onKeyReleased="#ShowNewValue" prefHeight="55.0" prefWidth="281.0" AnchorPane.bottomAnchor="298.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TextField fx:id="ExpensesStr" alignment="CENTER_RIGHT" layoutX="108.0" layoutY="64.0" onKeyReleased="#ShowNewValue" prefHeight="55.0" prefWidth="281.0" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TextField fx:id="CreditScoreStr" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="119.0" onKeyReleased="#ShowNewValue" prefHeight="55.0" prefWidth="281.0" styleClass="text-field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TextField fx:id="HouseCostStr" alignment="CENTER_RIGHT" layoutY="174.0" onKeyReleased="#ShowNewValue" prefHeight="64.0" prefWidth="281.0" styleClass="text-field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <ComboBox fx:id="TermStr" layoutY="238.0" onAction="#handleClicked" onMousePressed="#handle" prefHeight="55.0" prefWidth="281.0" promptText="Pick Term" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label fx:id="MortgagePaymentDisplay" alignment="CENTER_RIGHT" layoutX="239.0" layoutY="293.0" prefHeight="71.0" prefWidth="402.0" text="Please fill in all information above" textAlignment="RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
         </items>
